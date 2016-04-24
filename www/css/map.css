@@ -1,0 +1,267 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#808080;
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:30px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+.location{
+    background:url("../img/mapa.png") no-repeat bottom center;
+    position:fixed;
+    padding-top:50%;
+    padding-left: 20px;
+    color:white;
+    width: 100%;
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height: 100px;
+}
+
+#quality{
+    padding-top: 1%;
+    position:absolute;
+    width:50%;
+    padding-left: 2%;
+    left: 0;
+}
+#score{
+    padding-top: 1%;
+    position:absolute;
+    padding-right: 2%;
+    right: 0;
+}
+
+.recomendacion_alerta{
+    background-color: white;
+    position:absolute;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+    color:red;
+    font-style: bold;
+    width: 100%;
+    padding-top:2.5%;
+    padding-bottom: 2.5%;
+}
+
+.medicion_alerta{
+    background-color: red;
+    position:absolute;
+    color:white;
+    height: 50px;
+    width: 100%;
+    bottom:0;
+}
+
+.recomendacion_bien{
+    background-color: white;
+    position:absolute;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+    color:#808080;
+    font-style: bold;
+    width: 100%;
+    padding-top:2.5%;
+    padding-bottom: 2.5%;
+}
+
+.medicion_bien{
+    background-color: green;
+    position:absolute;
+    color:white;
+    height: 50px;
+    width: 100%;
+    bottom:0;
+}
+
+.recomendacion_reg{
+    background-color: white;
+    position:absolute;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+    color:#808080;
+    font-style: bold;
+    width: 100%;
+    padding-top:2.5%;
+    padding-bottom: 2.5%;
+}
+
+.medicion_reg{
+    background-color: yellow;
+    position:absolute;
+    color:white;
+    height: 50px;
+    width: 100%;
+    bottom:0;
+}
+
+.small{
+    font-size: 20px;
+}
+
+/* Portrait layout (default) */
+.app {
+     /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+#username{
+    background:url("../img/blue_background_form.png") no-repeat bottom right;
+    background-size: 30px;
+    background-color: #29abe2;
+    color:white;
+    font-size: 20px;
+    padding:10px;
+}
+
+.sidebar-menu{
+    position: fixed;
+    display: inline-block;
+    top: 0px;
+    height: 100%;
+    width: 270px;
+    left: -270px;
+    background:url("../img/logo.png") no-repeat bottom center;
+    background-size: 200px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu_element{
+    font-size: 20px;
+    color: #808080;
+    box-shadow: 0px 0px 2px 0px;
+    padding: 7px;
+}
+
+.element-icon{
+    height: 25px;
+}
+
+.hamburguesa{
+    height: 25px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.logo{
+    height: 50px;
+}
+
+.logo2{
+    height: 35px;
+}
+
+#wrapper{
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    width:100%;
+}
+
+#action-bar{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    padding-left: 10px;
+}
+
+#burger{
+    position: relative;
+    height: 30%
+}
+#bt{
+    position: absolute;
+    right: 0;
+    height: 50%;
+    padding-right: 5%;
+    padding-top: 3%;
+
+}
+#hlta_logo{
+    position: absolute;
+    padding-left: 35%;
+    padding-right: 35%;
+    height: 50%;
+
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/map.css" />
+    <title>HealthAir - Map</title>
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar-menu"> 
+        <div id="username">
+            nombre@dominio.com
+        </div>
+        <div class="menu_element">
+            <img src="../img/map.png" class="element-icon"/>
+            Map
+        </div>
+        <div class="menu_element">
+            <img src="../img/history.png" class="element-icon"/>
+            History
+        </div>
+        <div class="menu_element">
+            <img src="../img/conf.png" class="element-icon"/>
+            Configuration
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="action-bar">
+            <div id="hlta_logo">
+                <img src="../img/logo.png" class="logo"/>
+            </div>
+            <div id="bt">
+                <img src="../img/bt_off.png" class="logo2"/>
+            </div>
+            <div id="burger">
+                <img class="toggle hamburguesa" src="../img/icon-mobile.png" onclick="toggle_sidebar()" />
+            </div>
+        </div>
+        <div class="location">
+            <div class="small"> Calidad del aire en </div>
+            <div class="medium"> Algarin </div>
+        </div>
+        <div id="mapa">
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+        function toggle_sidebar()
+        {
+            var sidebar = document.getElementById("sidebar");
+            var actionbar = document.getElementById("wrapper");
+            
+            console.log(sidebar.style.left);
+            
+            if(sidebar.style.left == "-270px")
+            {
+                sidebar.style.left = "0px";
+                actionbar.style.left = "270px";
+            }
+            else
+            {
+                sidebar.style.left = "-270px";
+                actionbar.style.left = "0px";
+            }
+        }
+    </script>
+    <div id="footer">
+        <div class="recomendacion_reg">
+            There are no risks, still.
+        </div>
+        <div class="medicion_reg"> 
+            <div id="quality">
+                Regular
+            </div>
+            <div id="score"> 
+                80
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
